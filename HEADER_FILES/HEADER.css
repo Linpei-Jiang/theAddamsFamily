@@ -1,0 +1,128 @@
+/* RESET */
+* {margin: 0; padding: 0; text-decoration: none;}
+html, body {overscroll-behavior: none; background: #f1f1f1;}
+
+.mobileWrapper {
+    width: 100vw;
+    display: flex;
+    padding: 20px 0;
+    background: rgba(255,255,255,0.15);
+    margin-bottom: -15px;
+}
+.mobileWrapper p {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin: auto;
+    transition: 0.3s;
+}
+.mobileWrapper:hover .mobileWrapper p {scale: 0.95;}
+
+header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    z-index: 9999;
+    background: none;
+}
+.logo {
+    width: 100%;
+    color: white;
+    margin-left: 30%;
+    font-size: 25px;
+}
+
+header a {text-decoration: none; font-size: 18px; font-weight: 450; color: rgba(255, 255, 255, 0.75); transition: 0.3s; }
+header a:hover {color: white; font-weight: bold;}
+
+.desktopNav {
+    position: absolute;
+    right: 50px;
+    display: flex;
+    width: 40%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.3s;
+}
+.desktopNav li, .mobileNav li {list-style: none;}
+
+/* HAMBURGER */
+.menu {
+    z-index: 616;
+    position: absolute;
+    right: 50px;
+    height: 40px;
+    display: none; /* hidden on desktop */
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.menu:hover, .userArea:hover, .mobileUserArea:hover {cursor: pointer;}
+.menu span {
+    border-radius: 5px;
+    width: 35px;
+    height: 6px;
+    background: #fff;
+    transition: 0.3s;
+}
+
+.mobileMenu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #0F1A2B;
+    padding: 20px 0;
+    transition: 0.3s;
+}
+.mobileMenu a {
+    margin-left: 50px;
+    display: block;
+    padding: 14px 0;
+    color: white;
+    font-size: 22px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .desktopNav {display: none;}
+    .menu {display: flex;}
+    .logo,.logoChanged {margin-left: 20px;}
+
+    .loginBtn {
+        padding: 0;
+        margin-bottom: -18px;
+        width: 100%;
+    }
+}
+
+/* --- HAMBURGER ANIMATION --- */
+.menu span {
+    border-radius: 5px;
+    width: 35px;
+    height: 6px;
+    background: #fff;
+    transition: 0.4s ease;
+}
+
+/* When active */
+.menu.active span:nth-child(1) {transform: translateY(12px) rotate(45deg);}
+.menu.active span:nth-child(2) {opacity: 0;}
+.menu.active span:nth-child(3) {transform: translateY(-12px) rotate(-45deg);}
+
+/* When menu is open */
+@media (max-width: 900px) {
+    .mobileMenu.open {
+        display: flex;
+    }
+}
+
+#header[data-page="home"] header {.PositionMain a {color: white; font-weight: bold;}}
+#header[data-page="history"] header {background: #0F1A2B; .PositionHistory a {color: white; font-weight: bold;}}
+#header[data-page="tickets"] header {background: #0F1A2B; .PositionTickets a {color: white; font-weight: bold;}}
+#header[data-page="contact"] header {background: #0F1A2B; .PositionContact a {color: white; font-weight: bold;}}
