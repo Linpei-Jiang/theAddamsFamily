@@ -17,7 +17,7 @@ main {
 .section-header {
     text-align: center;
     width: 100%;
-    line-height: 28px;
+    line-height: 34px;
 }
 
 .section-header h1 {color: #3e2560; font-size: clamp(16px, 3vw, 2.5rem); text-transform: uppercase;}
@@ -28,40 +28,42 @@ main {
     .section-header h3 {font-size: clamp(16px, 3vw, 1.2rem);}
 }
 
-
-.aboutFHHS {
-    margin: 40px 0;
+.aboutFHHS, .aboutFHHSTheAddamsFamily {
+    margin: 60px 0;
     width: 90%;
     height: auto;
 }
 
-.aboutFHHSContent {
+.aboutFHHSContent, .aboutFHHSTheAddamsFamilyContent {
     margin-top: 30px;
     display: flex;
     justify-content: space-evenly;
 }
+.aboutFHHSTheAddamsFamily {}
 
-.FHHSImg, .FHHSInfo {
+.FHHSImg, .FHHSInfo, .FHHSTheAddamsFamilyInfo, .FHHSTheAddamsFamilyImg {
     border-radius: 10px;
     width: 50%;
     height: 350px;
 }
 
-.FHHSInfo {
+.FHHSInfo, .FHHSTheAddamsFamilyInfo {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
-.FHHSInfo h3 {padding: 0 20px; font-size: clamp(14px, 2vw, 2rem); color: #2E3A45;}
+.FHHSInfo h3, .FHHSTheAddamsFamilyInfo h3 { padding: 0 20px; font-size: clamp(14px, 2vw, 2rem); color: #2E3A45;}
+.FHHSTheAddamsFamilyInfo {text-align: end;}
 
-.FHHSInfo p {
+.FHHSInfo p, .FHHSTheAddamsFamilyInfo p {
     font-size: clamp(14px, 2vw, 16px);
     padding: 0 20px;
     color: #2E3A45;
 }
+.FHHSTheAddamsFamilyInfo button {margin-right: 20px;}
 
-.FHHSInfo button {
+.FHHSInfo button, .FHHSTheAddamsFamilyInfo button {
     margin-left: 20px;
     padding: 15px;
     width: 90%;
@@ -76,14 +78,14 @@ main {
     transition: 0.3s;
 }
 
-.FHHSInfo button:hover {
+.FHHSInfo button:hover, .FHHSTheAddamsFamilyInfo button:hover {
     background: #2E3A45;
 }
 
 @media (max-width: 900px) {
-    .aboutFHHSContent {flex-direction: column;}
-    .FHHSImg {width: 100%; height: 250px;}
-     .FHHSInfo {width: 100%; text-align: center;}
-    .FHHSInfo h3 {font-size: clamp(25px, 2vw, 1.2rem); margin-top: 15px; display: none;}
-    .FHHSInfo p {font-size: clamp(15px, 1vw, 25px); padding: 15px 0;}
+    .aboutFHHSContent, .aboutFHHSTheAddamsFamilyContent {flex-direction: column;}
+    .FHHSImg, .FHHSTheAddamsFamilyImg  {width: 100%; height: 250px;}
+    .FHHSInfo, .FHHSTheAddamsFamilyInfo {width: 100%; text-align: center;}
+    .FHHSInfo h3, .FHHSTheAddamsFamilyInfo h3 {font-size: clamp(25px, 2vw, 1.2rem); margin-top: 15px; display: none;}
+    .FHHSInfo p, .FHHSTheAddamsFamilyInfo p {font-size: clamp(15px, 1vw, 25px); padding: 15px 0;}
 }
