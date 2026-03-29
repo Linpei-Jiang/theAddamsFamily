@@ -28,24 +28,24 @@ main {
     .section-header h3 {font-size: clamp(16px, 3vw, 1.2rem);}
 }
 
-.aboutFHHS, .aboutFHHSTheAddamsFamily {
+.aboutFHHS, .aboutFHHSTheAddamsFamily, .behindTheScene {
     margin: 60px 0;
     width: 90%;
     height: auto;
 }
 
-.aboutFHHSContent, .aboutFHHSTheAddamsFamilyContent {
+.aboutFHHSContent, .aboutFHHSTheAddamsFamilyContent, .behindTheSceneContent {
     margin-top: 30px;
     display: flex;
     justify-content: space-evenly;
 }
-.aboutFHHSTheAddamsFamily {}
 
-.FHHSImg, .FHHSInfo, .FHHSTheAddamsFamilyInfo, .FHHSTheAddamsFamilyImg {
+.FHHSImg, .FHHSInfo, .FHHSTheAddamsFamilyInfo, .FHHSTheAddamsFamilyImg, .FHHSTheAddamsFamilyImg1 {
     border-radius: 10px;
     width: 50%;
-    height: 350px;
 }
+
+.FHHSTheAddamsFamilyImg1 {display: none;}
 
 .FHHSInfo, .FHHSTheAddamsFamilyInfo {
     display: flex;
@@ -64,6 +64,7 @@ main {
 .FHHSTheAddamsFamilyInfo button {margin-right: 20px;}
 
 .FHHSInfo button, .FHHSTheAddamsFamilyInfo button {
+    margin-top: 30px;
     margin-left: 20px;
     padding: 15px;
     width: 90%;
@@ -82,9 +83,20 @@ main {
     background: #2E3A45;
 }
 
+.behindTheSceneContent video {
+    width: 48%;
+    border-radius: 10px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
 @media (max-width: 900px) {
-    .aboutFHHSContent, .aboutFHHSTheAddamsFamilyContent {flex-direction: column;}
-    .FHHSImg, .FHHSTheAddamsFamilyImg  {width: 100%; height: 250px;}
+    .aboutFHHSTheAddamsFamily {margin: 0;}
+    .FHHSInfo button, .FHHSTheAddamsFamilyInfo button {margin: 0;}
+    .aboutFHHSContent, .aboutFHHSTheAddamsFamilyContent, .behindTheSceneContent {flex-direction: column;}
+    .behindTheSceneContent video {width: 99%; margin: 10px 0;}
+    .FHHSImg, .FHHSTheAddamsFamilyImg1 {width: 100%; height: 280px;}
+    .FHHSTheAddamsFamilyImg {display: none;} .FHHSTheAddamsFamilyImg1 {display: block;}
     .FHHSInfo, .FHHSTheAddamsFamilyInfo {width: 100%; text-align: center;}
     .FHHSInfo h3, .FHHSTheAddamsFamilyInfo h3 {font-size: clamp(25px, 2vw, 1.2rem); margin-top: 15px; display: none;}
     .FHHSInfo p, .FHHSTheAddamsFamilyInfo p {font-size: clamp(15px, 1vw, 25px); padding: 15px 0;}
