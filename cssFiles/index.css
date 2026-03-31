@@ -28,13 +28,13 @@ main {
     .section-header h3 {font-size: clamp(16px, 3vw, 1.2rem);}
 }
 
-.aboutFHHS, .aboutFHHSTheAddamsFamily, .behindTheScene {
+.aboutFHHS, .aboutFHHSTheAddamsFamily, .behindTheScene, .socialMedia {
     margin: 60px 0;
     width: 90%;
     height: auto;
 }
 
-.aboutFHHSContent, .aboutFHHSTheAddamsFamilyContent, .behindTheSceneContent {
+.aboutFHHSContent, .aboutFHHSTheAddamsFamilyContent, .behindTheSceneContent, .socialMediaContent {
     margin-top: 30px;
     display: flex;
     justify-content: space-evenly;
@@ -84,10 +84,35 @@ main {
 }
 
 .behindTheSceneContent video {
-    width: 48%;
+    width: 49%;
     border-radius: 10px;
     aspect-ratio: 16/9;
     object-fit: cover;
+}
+
+.socialMediaContent {
+    justify-content: center;
+    gap: 20px;
+}
+
+.socialMediaCard {
+    display: flex;
+    align-items: center;
+    width: 280px;
+    height: 300px;
+    border-radius: 10px;
+    background: #3e2560;
+    transition: 0.3s;
+}
+
+.socialMediaCard img {
+    margin: 0 auto;
+    width: 20%;
+}
+
+.socialMediaCard:hover {
+    scale: 0.99;
+    border-radius: 5px;
 }
 
 @media (max-width: 900px) {
@@ -100,4 +125,9 @@ main {
     .FHHSInfo, .FHHSTheAddamsFamilyInfo {width: 100%; text-align: center;}
     .FHHSInfo h3, .FHHSTheAddamsFamilyInfo h3 {font-size: clamp(25px, 2vw, 1.2rem); margin-top: 15px; display: none;}
     .FHHSInfo p, .FHHSTheAddamsFamilyInfo p {font-size: clamp(15px, 1vw, 25px); padding: 15px 0;}
+}
+
+@media (max-width: 450px) {
+    .socialMedia {margin-top: 0;}
+    .socialMediaCard {height: 200px;}
 }
