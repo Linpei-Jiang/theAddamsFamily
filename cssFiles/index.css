@@ -179,4 +179,9 @@ main {
     border-radius: 10px;
 }
 
+@media (max-width: 900px) {
+    .slides {flex-direction: column;}
+    .slides iframe {width: 100%;}
+}
+
 
