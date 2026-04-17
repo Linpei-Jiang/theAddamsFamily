@@ -1,12 +1,18 @@
 footer {
+    display: flex;
     margin-top: 30px;
     width: 100%;
     padding: 30px 0;
     background: #3e2560;
 }
 
+footer .ul1 {
+    margin-left: 8vh;
+    list-style: none;
+}
+
 footer ul {
-    margin-left: 60%;
+    margin-left: 50px;
     list-style: none;
 }
 
