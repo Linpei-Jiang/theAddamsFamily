@@ -69,7 +69,7 @@ header a:hover {color: white; font-weight: bold;}
 .menu {
     z-index: 616;
     position: absolute;
-    right: 20px;
+    right: 5%;
     height: 40px;
     display: none; /* hidden on desktop */
     flex-direction: column;
@@ -107,7 +107,7 @@ header a:hover {color: white; font-weight: bold;}
 
 
 /* RESPONSIVE */
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     .desktopNav {display: none;}
     .menu {display: flex;}
     .logo,.logoChanged {margin-left: 20px;}
@@ -135,3 +135,4 @@ header a:hover {color: white; font-weight: bold;}
 #header[data-page="ourActors"] header {background: #3e2560; .PositionOurActors a {color: white; font-weight: bold;}}
 #header[data-page="tickets"] header {background: #3e2560; .PositionTickets a {color: white; font-weight: bold;}}
 #header[data-page="direction"] header {background: #3e2560; .PositionDirection a {color: white; font-weight: bold;}}
+#header[data-page="about"] header {background: #3e2560; .PositionAbout a {color: white; font-weight: bold;}}
