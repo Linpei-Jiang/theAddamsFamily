@@ -14,6 +14,17 @@
 
     <section class="hero" style="background-image: url('images/heroImg.jpg'); background-size: cover; background-position: center; "></section>
 
+    <div id="popup-overlay">
+        <div id="popup-box">
+            <h2>Welcome!</h2>
+            <p>Mr. Koch dedicated 24 years of his life to his students through the Music Department, Women's Chorus, Concert Choir and Play Pro. He gave so much of himself to Forest Hills High School's Music Program and to the children he cared for so deeply.
+                In lieu of flowers, the Koch family wishes for donations to be made in his memory to Forest Hills High School and its music programs supporting the music academies, chorus programs, Play Pro and the student experiences he was so passionate about as well as a scholarship in his name so that his legacy can continue to support FHHS students for years to come.
+                We invite families to make a donation via check to Forest Hills High School Parent Association or via Zelle to pafhhs@gmail.com. Please reference Robert Koch in the memo.</p>
+            <p>- The Koch Family</p>
+            <button id="close-popup">Continue</button>
+        </div>
+    </div>
+
     <main>
         <div class="aboutFHHSTheAddamsFamily" style="margin-top: 30px;">
             <div class="section-header">
@@ -136,5 +147,25 @@
     <footer id="footer"></footer>
     <script type="module" src="jsFiles/HEADER_FOOTER.js"></script>
     <script src="jsFiles/HEADER_FOOTER_ANIMATION.js"></script>
+    <script>
+        window.addEventListener("load", () => {
+            const popup = document.getElementById("popup-overlay");
+            const closeBtn = document.getElementById("close-popup");
+
+            const lastShown = localStorage.getItem("popupLastShown");
+            const now = Date.now();
+            const oneHour = 60 * 60 * 1000;
+
+            // Show popup only if 1 hour has passed
+            if (!lastShown || now - lastShown > oneHour) {
+                popup.classList.add("active");
+            }
+
+            closeBtn.addEventListener("click", () => {
+                popup.classList.remove("active");
+                localStorage.setItem("popupLastShown", Date.now());
+            });
+        });
+    </script>
 </body>
 </html>
