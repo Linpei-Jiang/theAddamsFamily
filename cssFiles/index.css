@@ -233,4 +233,14 @@ main {
     .slides iframe {width: 100%;}
 }
 
+#viewMore {
+    margin-top: 20px;
+    padding: 10px 50px;
+    background: #3e2560;
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+#viewMore:hover {background: #765a9a;}
 

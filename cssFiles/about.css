@@ -160,6 +160,15 @@ aside {
     background: #3e2560;
     color: white;
     border-radius: 50px;
+    line-height: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 13px;
+}
+
+#socialMedia a:hover {
+    background: #684695;
 }
 
 .period5Web {
