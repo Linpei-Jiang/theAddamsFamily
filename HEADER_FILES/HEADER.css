@@ -50,14 +50,17 @@ header {
     .logoSet h2 {font-size: 22px;}
 }
 
-header a {text-decoration: none; font-size: 18px; font-weight: 450; color: lightgray; transition: 0.3s;}
+header a {text-decoration: none; font-size: 18px; font-weight: 450; color: lightgray; transition: 0.3s;
+    text-shadow:
+            1px 1px 0 #3e2560,
+            1px 1px 5px #3e2560;}
 header a:hover {color: white; font-weight: bold;}
 
 .desktopNav {
     position: absolute;
     right: 50px;
     display: flex;
-    width: 50%;
+    width: 44%;
     height: 100%;
     justify-content: space-around;
     align-items: center;
@@ -135,4 +138,46 @@ header a:hover {color: white; font-weight: bold;}
 #header[data-page="ourActors"] header {background: #3e2560; .PositionOurActors a {color: white; font-weight: bold;}}
 #header[data-page="tickets"] header {background: #3e2560; .PositionTickets a {color: white; font-weight: bold;}}
 #header[data-page="direction"] header {background: #3e2560; .PositionDirection a {color: white; font-weight: bold;}}
-#header[data-page="about"] header {background: #3e2560; .PositionAbout a {color: white; font-weight: bold;}}
+#header[data-page="about"] header {background: #3e2560; .PositionAbout #drop {color: #3e2560;}}
+
+.PositionAbout a {
+    background: white;
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: #3e2560;
+    text-shadow: 0 0 black;
+    font-weight: bold;
+}
+
+.PositionAbout a:hover {
+    color: black;
+    border-radius: 5px;
+}
+
+.PositionAbout:hover .dropdown {
+    display: block;
+}
+
+.dropdown {
+    width: 150px;
+    display: none;
+    position: absolute;
+    background: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.dropdown li {
+    text-align: left;
+    margin: 10px 0;
+}
+
+.dropdown li a {
+    background: none;
+    color: #b28fdd;
+}
+
+.dropdown li a:hover {
+    color: #3e2560;
+}
