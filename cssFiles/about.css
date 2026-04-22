@@ -176,3 +176,43 @@ aside {
     width: 90%;
     border-radius: 10px;
 }
+
+
+.creditsContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.creditsContent div {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    background: white;
+    box-shadow: 0.3em 0.3em 0.7em #a279da;
+    height: auto;
+    border-radius: 10px;
+    padding-bottom: 40px;
+}
+
+.creditsContent div h2 {
+    text-align: center;
+    padding-top: 35px;
+    color: #3e2560;
+}
+
+.creditsContent ul {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.creditsContent ul li {
+    list-style: none;
+    text-align: center;
+    padding: 2px 0;
+    color: #765a9a;
+    font-weight: bold;
+    font-size: 14px;
+}
+
